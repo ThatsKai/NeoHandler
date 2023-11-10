@@ -20,8 +20,8 @@ public class LogsTable {
     }
 
     @SneakyThrows
-    public void createTable() {
-        CompletableFuture.runAsync(() -> {
+    public CompletableFuture<Void> createTable() {
+        return CompletableFuture.runAsync(() -> {
             try {
                 Statement statement = provider.getConnection().createStatement();
                 statement.executeUpdate("CREATE TABLE IF NOT EXISTS aclogs (" +
