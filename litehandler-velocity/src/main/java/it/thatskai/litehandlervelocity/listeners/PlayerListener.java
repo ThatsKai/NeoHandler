@@ -7,16 +7,21 @@ import com.velocitypowered.api.event.connection.LoginEvent;
 import com.velocitypowered.api.event.connection.PluginMessageEvent;
 import com.velocitypowered.api.proxy.Player;
 import it.thatskai.litehandlervelocity.LiteHandlerVelocity;
+import it.thatskai.litehandlervelocity.config.ConfigCache;
+import it.thatskai.litehandlervelocity.utils.Format;
 import it.thatskai.litehandlervelocity.utils.StaffUtils;
-
-import java.util.concurrent.CompletableFuture;
 
 public class PlayerListener {
 
     @Subscribe
     public void onLogin(LoginEvent e){
         Player player = e.getPlayer();
+
         if(!StaffUtils.playerAlerts.contains(player.getUniqueId()) && player.hasPermission("litehandler.alerts")){
+            if(ConfigCache.ON_JOIN_ALERTS_MESSAGE_ENABLED){
+                player.sendMessage(Format.color(ConfigCache.ON_JOIN_MESSAGE));
+            }
+
             StaffUtils.playerAlerts.add(player.getUniqueId());
         }
 
