@@ -50,6 +50,6 @@ alerts:
     alert: "&3[%server%] &8> &f%player% &7failed &f%check% &7(&f%type%&7) &7(&fx%vl%&7) &7(V)" #also %maxvl% provided
   ban: #permission: litehandler.showban
     command: "ban %player% Cheating (AntiCheat) 30d -s"
-    format: "&c✘ Console has banned %player% for Cheating ✘" #also %check% and %vl% provided
+    format: "\n&c✘ Console has banned %player% for Cheating ✘\n" #also %check% and %vl% provided
 
 configuration-version: 1
