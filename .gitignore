@@ -13,3 +13,5 @@ litehandler-velocity/target/classes/velocity-plugin.json
 litehandler-velocity/target/classes/config.yml
 .idea/uiDesigner.xml
 .idea/artifacts/litehandler_velocity_jar.xml
+.idea/artifacts/litehandler_bukkit_jar.xml
+litehandler-bukkit/target/classes/plugin.yml
