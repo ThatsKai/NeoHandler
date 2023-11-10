@@ -16,6 +16,8 @@ import dev.dejvokep.boostedyaml.settings.dumper.DumperSettings;
 import dev.dejvokep.boostedyaml.settings.general.GeneralSettings;
 import dev.dejvokep.boostedyaml.settings.loader.LoaderSettings;
 import dev.dejvokep.boostedyaml.settings.updater.UpdaterSettings;
+import it.thatskai.litehandlervelocity.commands.AcLogsCommand;
+import it.thatskai.litehandlervelocity.commands.AlertsCommand;
 import it.thatskai.litehandlervelocity.config.ConfigCache;
 import it.thatskai.litehandlervelocity.database.SQLProvider;
 import it.thatskai.litehandlervelocity.listeners.PlayerListener;
@@ -100,6 +102,7 @@ public class LiteHandlerVelocity {
                 logger.error("Database connection incurred in a error!");
                 isDatabaseConnect = false;
             }
+            proxyServer.getCommandManager().register("aclogs", new AcLogsCommand());
         }
 
         alerts = new AlertsManager();
@@ -108,7 +111,7 @@ public class LiteHandlerVelocity {
         proxyServer.getChannelRegistrar().register(channel);
 
         proxyServer.getEventManager().register(this, new PlayerListener());
-
+        proxyServer.getCommandManager().register("alerts", new AlertsCommand());
 
     }
 

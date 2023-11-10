@@ -16,9 +16,10 @@ public class PlayerListener {
     @Subscribe
     public void onLogin(LoginEvent e){
         Player player = e.getPlayer();
-        if(!StaffUtils.playerAlerts.contains(player.getUniqueId())){
+        if(!StaffUtils.playerAlerts.contains(player.getUniqueId()) && player.hasPermission("litehandler.alerts")){
             StaffUtils.playerAlerts.add(player.getUniqueId());
         }
+
         if(LiteHandlerVelocity.getInstance().isDatabaseConnect()){
             if(LiteHandlerVelocity.getInstance().getSqlProvider().connect()){
                 LiteHandlerVelocity.getInstance().getSqlProvider().getLogsTable().addPlayer(player.getUsername()).whenComplete((b,throwable)->{

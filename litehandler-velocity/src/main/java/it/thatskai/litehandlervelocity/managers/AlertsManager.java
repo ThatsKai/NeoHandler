@@ -8,6 +8,8 @@ import it.thatskai.litehandlervelocity.utils.AutoBanCheck;
 import it.thatskai.litehandlervelocity.utils.Format;
 import it.thatskai.litehandlervelocity.utils.StaffUtils;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Optional;
 
 public class AlertsManager {
@@ -53,7 +55,8 @@ public class AlertsManager {
                     .replace("%server%",server)
                     .replace("%player%",player)
                     .replace("%vl%",vl+"")
-                    .replace("%check%",check));
+                    .replace("%check%",check)
+                    .replace("%date%",getDate()));
         }
 
 
@@ -105,7 +108,8 @@ public class AlertsManager {
                     .replace("%vl%",vl+"")
                     .replace("%check%",checkName)
                     .replace("%type%",checkType)
-                    .replace("%maxvl%",maxVl));
+                    .replace("%maxvl%",maxVl)
+                    .replace("%date%",getDate()));
         }
 
 
@@ -128,5 +132,9 @@ public class AlertsManager {
         }
         LiteHandlerVelocity.getInstance().getProxyServer().getCommandManager().executeAsync(
                 LiteHandlerVelocity.getInstance().getProxyServer().getConsoleCommandSource(), ConfigCache.ALERTS_BAN_COMMAND);
+    }
+
+    public String getDate(){
+        return new SimpleDateFormat(ConfigCache.DATE_FORMAT).format(new Date());
     }
 }
