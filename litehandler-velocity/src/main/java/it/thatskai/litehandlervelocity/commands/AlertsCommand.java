@@ -11,9 +11,10 @@ public class AlertsCommand implements SimpleCommand {
     @Override
     public void execute(Invocation invocation) {
         CommandSource source = invocation.source();
-        String[] args = invocation.arguments();
         if(!(source instanceof Player)) return;
+
         Player player = (Player) source;
+
         if(!player.hasPermission("litehandler.alerts")){
             player.sendMessage(Format.color(ConfigCache.NO_PERMISSIONS));
             return;
