@@ -47,7 +47,7 @@ public class AlertsManager {
         sendAlert(ConfigCache.ALERTS_GRIM_ALERT
                 .replace("%server%",server)
                 .replace("%player%",player)
-                .replace("%check",check)
+                .replace("%check%",check)
                 .replace("%vl%",vl+""));
 
         if(LiteHandlerVelocity.getInstance().isDatabaseConnect()){
