@@ -29,6 +29,7 @@ public class AcLogsCommand implements SimpleCommand {
                 source.sendMessage(Format.color(ConfigCache.ACLOGS_DONT_FOUND.replace("%player%",player)));
                 return;
             }
+
             String ms = String.valueOf(System.currentTimeMillis() - start);
 
             source.sendMessage(Format.color(ConfigCache.ACLOGS_FOUND
@@ -38,9 +39,10 @@ public class AcLogsCommand implements SimpleCommand {
             int index = Math.max(logs.size() - 20, 0);
 
             for (int i = index; i < logs.size(); i++) {
-                if(logs.get(i).isEmpty()) continue;
+                String log = logs.get(i);
+                if(log.isEmpty()) continue;
                 source.sendMessage(Format.color(ConfigCache.ACLOGS_FORMAT
-                        .replace("%log%",logs.get(i))));
+                        .replace("%log%",log)));
             }
 
         });
