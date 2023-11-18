@@ -13,8 +13,7 @@ public final class LiteHandlerBukkit extends JavaPlugin implements Listener {
 
     @Getter
     private static LiteHandlerBukkit instance;
-
-
+    
     @Override
     public void onEnable(){
         instance = this;
