@@ -11,4 +11,4 @@ Vulcan & GrimAC handler for velocity
 
 if you use lite handler for bukkit (only for handle grimac alerts) GrimAC plugin is required.
 
-if you want aclogs feature, you have to setup database.
+if you want aclogs feature, you have to setup the database.
