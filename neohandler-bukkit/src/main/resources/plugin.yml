@@ -1,0 +1,7 @@
+name: NeoHandlerBukkit
+version: '${project.version}'
+main: it.thatskai.neohandlerbukkit.NeoHandlerBukkit
+author: ThatsKai
+description: "GrimAC handler for LiteHandler velocity"
+depend:
+  - GrimAC

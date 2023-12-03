@@ -1,7 +1,0 @@
-name: LiteHandlerBukkit
-version: '${project.version}'
-main: it.thatskai.litehandlerbukkit.LiteHandlerBukkit
-author: ThatsKai
-description: "GrimAC handler for LiteHandler velocity"
-depend:
-  - GrimAC

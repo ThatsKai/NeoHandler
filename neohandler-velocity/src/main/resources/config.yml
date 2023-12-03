@@ -1,0 +1,55 @@
+database:
+  driver: "com.mysql.cj.jdbc.Driver"
+  #available drivers:
+  # "org.mariadb.jdbc.Driver",
+  # "com.mysql.cj.jdbc.Driver"
+  host: localhost
+  database: neohandler
+  username: root
+  password: ""
+
+aclogs:
+  enable: true
+  grim:
+    format: "&7[%date%] &3[%server%] &8> &f%player% &8> &3%check% &7(&fx%vl%) &7(G)"
+  vulcan:
+    format: "&7[%date%] &3[%server%] &8> &f%player% &8> &3%check% &7(&f%type%&7) &7(&fx%vl%) &7(V)"
+  messages:
+    date-format: "dd/MM/yyyy | HH:mm"
+    dont-found: "&cThere isn't any log for the player %player%"
+    found: "&7%player% logs (%ms% ms):"
+    format: " &r%log%"
+
+messages:
+  alerts-enabled: "&aAlerts enabled!"
+  alerts-disabled: "&cAlerts disabled!"
+  no-permissions: "&cNo permissions!"
+  join:
+    enable: false
+    message: "&aAlerts enabled!"
+
+alerts:
+  grim:
+    auto-ban-checks:
+      reach:
+        flags: 20
+    disabled-checks:
+      - NegativeTimer
+      - Phase
+      - Simulation
+    flag-alerts: 5 #how often the alert is sent | Set to -1 to disable
+    alert: "&3[%server%] &8> &f%player% &7failed &f%check% &7(&fx%vl%&7) &7(G)"
+  vulcan:
+    auto-ban-checks:
+      badpackets:
+        type: h
+        flags: 1
+    disabled-checks:
+      - GhostHand
+    flag-alerts: -1 #how often the alert is sent | Set to -1 to disable
+    alert: "&3[%server%] &8> &f%player% &7failed &f%check% &7(&f%type%&7) &7(&fx%vl%&7) &7(V)" #also %maxvl% provided
+  ban: #permission: neohandler.showban
+    command: "ban %player% Cheating (AntiCheat) 30d -s"
+    format: "\n&c✘ Console has banned %player% for Cheating ✘\n" #also %check% and %vl% provided
+
+configuration-version: 1
