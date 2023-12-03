@@ -15,3 +15,10 @@ litehandler-velocity/target/classes/config.yml
 .idea/artifacts/litehandler_velocity_jar.xml
 .idea/artifacts/litehandler_bukkit_jar.xml
 litehandler-bukkit/target/classes/plugin.yml
+*.lst
+*.jar
+neohandler-velocity/target/classes/velocity-plugin.json
+neohandler-velocity/target/maven-archiver/pom.properties
+neohandler-velocity/target/classes/config.yml
+neohandler-bukkit/target/maven-archiver/pom.properties
+neohandler-bukkit/target/classes/plugin.yml

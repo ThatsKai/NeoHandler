@@ -1,6 +1,6 @@
-name: LiteHandlerBukkit
+name: NeoHandlerBukkit
 version: '1.0'
-main: it.thatskai.litehandlerbukkit.LiteHandlerBukkit
+main: it.thatskai.neohandlerbukkit.NeoHandlerBukkit
 author: ThatsKai
 description: "GrimAC handler for LiteHandler velocity"
 depend:

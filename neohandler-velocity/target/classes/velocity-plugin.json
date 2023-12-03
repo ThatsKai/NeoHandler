@@ -1,1 +1,1 @@
-{"id":"litehandler-velocity","name":"litehandler-velocity","version":"1.0","description":"Vulcan \u0026 GrimAC Handler for velocity","authors":["ThatsKai"],"dependencies":[],"main":"it.thatskai.litehandlervelocity.LiteHandlerVelocity"}
+{"id":"neohandler-velocity","name":"neohandler-velocity","version":"1.0","description":"Vulcan \u0026 GrimAC Handler for velocity","authors":["ThatsKai"],"dependencies":[],"main":"it.thatskai.neohandlervelocity.NeoHandlerVelocity"}
