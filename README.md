@@ -5,7 +5,8 @@ Vulcan & GrimAC handler for velocity
 
 - /alerts - Toggle/Untoggle alerts
 - /aclogs - See player logs (Database required)
-- /litehandlerreload - Reload configuration file
+- /neohandler reload - Reload configuration file
+- /neohandler test grim - Send a test flag for grim ac
 
 ## Dependencies
 
