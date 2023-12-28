@@ -131,7 +131,7 @@ public class AlertsManager {
             }
         }
         NeoHandlerVelocity.getInstance().getProxyServer().getCommandManager().executeAsync(
-                NeoHandlerVelocity.getInstance().getProxyServer().getConsoleCommandSource(), ConfigCache.ALERTS_BAN_COMMAND);
+                NeoHandlerVelocity.getInstance().getProxyServer().getConsoleCommandSource(), ConfigCache.ALERTS_BAN_COMMAND.replace("%player%", player));
     }
 
     public String getDate(){
